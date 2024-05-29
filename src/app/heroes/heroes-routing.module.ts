@@ -20,7 +20,7 @@ const routes: Routes = [
         component: SearchPageComponent
       },
       {
-        path: "edit:/id",
+        path: 'edit/:id',
         component: NewPageComponent
       },
       {

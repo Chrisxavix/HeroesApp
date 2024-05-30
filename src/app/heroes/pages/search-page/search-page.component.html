@@ -10,18 +10,22 @@
         (input)="searchHero()"
         [matAutocomplete]="auto">
 
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="onSelectedOption($event)">
       <mat-option *ngFor="let hero of this.heroes" [value]="hero">
         {{ hero.superhero }}
       </mat-option>
-      <!-- @for (heroe of this.heroes | async; track heroe) {
-        <mat-option [value]="heroe">{{heroe}}</mat-option>
-      } -->
+
+      <mat-option
+        value=""
+        *ngIf="heroes?.length === 0 && searchInput.value && searchInput.value.length > 0">
+        No se encontró nada con el término {{ searchInput.value }}
+      </mat-option>
+
     </mat-autocomplete>
   </mat-form-field>
 
-  {{ searchInput.value | json }}
-  {{ searchInput.touched| json }}
-  {{ searchInput.dirty | json }}
-  {{ searchInput.pristine | json }}
+  {{ selectedHero | json }}
 </div>

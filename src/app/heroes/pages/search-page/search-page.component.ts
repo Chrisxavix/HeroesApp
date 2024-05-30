@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Hero } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-search-page',
@@ -12,9 +13,8 @@ import { HeroesService } from '../../services/heroes.service';
 export class SearchPageComponent {
 
   public searchInput = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
   public heroes?: Hero[] = [];
-  //filteredOptions: Observable<string[]>;
+  public selectedHero?: Hero;
 
   constructor(
     private heroesService: HeroesService,
@@ -23,10 +23,6 @@ export class SearchPageComponent {
   }
 
   ngOnInit() {
-    /* this.filteredOptions = this.searchInput.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '')),
-    ); */
   }
 
   searchHero(): void {
@@ -38,9 +34,14 @@ export class SearchPageComponent {
     })
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  onSelectedOption(event: MatAutocompleteSelectedEvent): void {
+    if(!event.option.value) {
+      this.selectedHero = undefined;
+      return;
+    }
+    const hero: Hero = event.option.value;
+    this.searchInput.setValue(hero.superhero);
+    this.selectedHero = hero;
   }
 
 }

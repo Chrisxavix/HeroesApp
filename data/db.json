@@ -8,14 +8,6 @@
   ],
   "heroes": [
     {
-      "id": "dc-batman",
-      "superhero": "Batman",
-      "publisher": "DC Comics",
-      "alter_ego": "Bruce Wayne",
-      "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
-    },
-    {
       "id": "dc-superman",
       "superhero": "Superman",
       "publisher": "DC Comics",
@@ -166,6 +158,32 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "dc-chuty",
+      "superhero": "Chuty",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Secret Comics #2",
+      "characters": "Bruce Wayne"
+    },
+    {
+      "id": "dcskone",
+      "superhero": "skone",
+      "publisher": "DC Comics",
+      "alter_ego": "freeeskone",
+      "first_appearance": "2005",
+      "characters": "cach",
+      "alt_img": ""
+    },
+    {
+      "id": "gE8AVF9",
+      "superhero": "sony",
+      "publisher": "DC Comics",
+      "alter_ego": "as",
+      "first_appearance": "78",
+      "characters": "asd",
+      "alt_img": "sa"
     }
   ]
 }

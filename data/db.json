@@ -9,11 +9,12 @@
   "heroes": [
     {
       "id": "dc-superman",
-      "superhero": "Superman",
-      "publisher": "DC Comics",
-      "alter_ego": "Kal-El",
+      "superhero": "Supermans",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Kal-Ele2",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": null
     },
     {
       "id": "dc-flash",
@@ -104,14 +105,6 @@
       "characters": "Tony Stark"
     },
     {
-      "id": "marvel-thor",
-      "superhero": "Thor",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Thor Odinson",
-      "first_appearance": "Journey into Myster #83",
-      "characters": "Thor Odinson"
-    },
-    {
       "id": "marvel-hulk",
       "superhero": "Hulk",
       "publisher": "Marvel Comics",
@@ -165,25 +158,17 @@
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Secret Comics #2",
-      "characters": "Bruce Wayne"
+      "characters": "Bruce Wayne",
+      "alt_img": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Chuty.png"
     },
     {
       "id": "dcskone",
-      "superhero": "skone",
+      "superhero": "picachu",
       "publisher": "DC Comics",
       "alter_ego": "freeeskone",
       "first_appearance": "2005",
       "characters": "cach",
-      "alt_img": ""
-    },
-    {
-      "id": "gE8AVF9",
-      "superhero": "sony",
-      "publisher": "DC Comics",
-      "alter_ego": "as",
-      "first_appearance": "78",
-      "characters": "asd",
-      "alt_img": "sa"
+      "alt_img": "https://i.pinimg.com/736x/8a/2a/73/8a2a73c4e85a9efc11a230e285a0db53.jpg"
     }
   ]
 }

@@ -21,7 +21,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HttpClientModule
   ],
   providers: [
-    provideClientHydration(),
+    //provideClientHydration(),
     provideAnimationsAsync(),
     provideHttpClient(withFetch())
   ],

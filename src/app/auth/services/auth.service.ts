@@ -25,24 +25,22 @@ export class AuthService {
     return this.http.get<User>(`${this.baseUrl}/users/1`)
     .pipe(
       tap(user => this.user = user),
-      tap(user => localStorage.setItem("token", "asdhkaKJHAKSHKAJKHDSalsd"))
-    )
+      tap(user => localStorage.setItem('token', 'aASDgjhasda.asdasd.aadsf123k')));
   }
 
   logout(): void {
     this.user = undefined;
-    localStorage.removeItem("token");
+    localStorage.clear();
   }
 
-  checkAuthentication(): Observable<boolean> | boolean {
-    if( !localStorage.getItem("token")) return false;
-    const token = localStorage.getItem("token");
-    return this.http.get<User>(`${this.baseUrl}/users/1`)
-    .pipe(
-      tap(user => this.user = user),
-      map(user => !!user),
-      catchError(error => of(false))
-    )
+  checkAuthentication(): Observable<boolean> {
+    if ( !localStorage.getItem('token') ) return of(false);
+    const token = localStorage.getItem('token')
+      return this.http.get<User>(`${ this.baseUrl }/users/1`)
+        .pipe(
+          tap( user => this.user = user ),
+          map( user => !!user ),
+          catchError( err => of(false) )
+        )
   }
-
 }
